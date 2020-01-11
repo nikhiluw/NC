@@ -1,0 +1,82 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+  .icon-btn{
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+  }
+  .icon-btn:hover{
+    color: #000;
+    text-decoration: none;
+    opacity: .75;
+  }
+  .icon-btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+.document-modal-lg .modal-lg{min-width:1080px;}
+.document-modal-lg .modal-body{height:50%;}
+.alignCenter{align-items:center ;}
+.documentActions{
+    display:flex;
+    align-items:start;
+    font-size:13px;
+    line-height: 13px;
+}
+.documentActions .icon-btn{font-size:inherit;margin-right:10px;display: flex;}
+.documentActions span.pageNum, .documentActions span.zoomPerc{
+    font-size: inherit;
+    line-height:inherit;
+    color: #6F6F6F;
+}
+.documentActions span.currentPage, .documentActions span.zoomPerc{
+    border-bottom:1px solid #CBCBCB;
+    margin: 0 6px;
+    padding:0 3px 3px;
+}
+.documentActions span.pageNum{margin-right:10px;}
+.documentActions .icon-btn.zoom{margin-right:0;}
+.documentActions .zoom .material-icons{
+    font-size: 15px;
+    line-height:15px;
+    color: #6F6F6F;
+}
+.docThumbnailPanel .material-icons .icon-list{
+    font-size:20px;
+}
+.docThumbnailPanel .material-icons .icon-drop-down{
+    font-size:18px;
+}
+.docThumbnail{
+    max-height:500px;
+    overflow-y:auto;
+}
