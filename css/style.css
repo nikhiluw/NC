@@ -654,7 +654,7 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
 .article .Reports_text{width:656px;}
 .article .Reports_text .articleTetWrapper{width:584px;}
 .article .Reports_text h4{line-height: 22px;margin-bottom: 4px;}
-.article a{color:#158CD1;text-decoration: none;}
+.card-body a{color:#158CD1;text-decoration: none;}
 .article ul.Posteddate li{padding:0 10px;float:left;}
 .article ul.Posteddate li.first{padding:0 10px 0 0;}
 .article ul.Posteddate li.last{padding:0 0 0 10px;}
@@ -693,7 +693,7 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
 }
 .article .commentsSection{padding-top:18px;border-top:1px solid rgba(112, 112, 112, 0.4);}
 .article .commentsSection h5{
-    font:bold 16px/18px "CalibriRegular";
+    font:normal 16px/18px "CalibriRegular";
     color:#000;
     padding-left:20px;
     background: url('./../images/svg/sms.svg') no-repeat 0 4px transparent;
@@ -728,7 +728,7 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
     margin-top:2px;
 }
 .article .card-body .commentsSection p{
-    font: normal 12px/14px CalibriRegular;
+    font: normal 14px/18px CalibriRegular;
     color: #43425D;
     margin:0 0 5px 0;
 }
@@ -738,13 +738,13 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
 }
 .article .commentsSection .comment .commentAuthName{
     display:block;
-    font: Bold 13px/15px CalibriRegular;
+    font: Bold 12px/14px CalibriRegular;
     color: #4D4F5C;
     margin-right:13px;
 }
 .article .commentsSection .comment .commentDate{
     display:block;
-    font: normal 11px/13px CalibriRegular;
+    font: normal 12px/13px CalibriRegular;
     color: #9B9B9B;
 }
 .recommendationsList{
@@ -772,7 +772,7 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
 h4.sectionHeading{
     font: normal 15px/17px Arial;
     color: #000000;
-    margin-bottom:15px;
+    margin-bottom:17px;
 }
 .recommendationsList .reportItem span{
     background: #E15462 0% 0% no-repeat padding-box;
