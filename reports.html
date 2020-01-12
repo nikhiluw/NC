@@ -149,45 +149,47 @@
   <!-- Main Content -->
   <Section id="content">
     <div class="container">
+      <div class="clearfix">
       <div class="content_left">
-        <div class="leftside">
-          <h2>Reports</h2>
-          <div class="breadcrumb">
+        <div class="clearfix">
+
+          <div class="leftside">
+            <h2>Reports</h2>
+            <div class="breadcrumb">
+              <ul>
+                <li>
+                  <a href="#">Home</a> ></li>
+                <li>
+                  <a href="#">Categories</a> ></li>
+                <li>
+                  <a href="#">Reports</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="thumbnail">
             <ul>
-              <li>
-                <a href="#">Home</a> ></li>
-              <li>
-                <a href="#">Categories</a> ></li>
-              <li>
-                <a href="#">Reports</a>
-              </li>
+                <li class="showThumbnail active">
+                    <a href="javascript:void(0);">
+                            
+                    </a>
+                </li>
+                <li class="showList">
+                    <a href="javascript:void(0);"></a>
+                </li>
+
             </ul>
+  
           </div>
         </div>
-
-        <div class="thumbnail">
-          <ul>
-            <li>
-              <a href="#">
-                <img src="images/thumbnail.png">
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="images/list.png">
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-        <div class="clear"></div>
+        
 
 
         <h4>1-3 of over 8 results for : "NLP"</h4>
 
         <div class="filter">
-          <ul>
+          <ul class="clearfix">
             <li class="one">
               <img src="images/filter.png"> </li>
             <li class="active">
@@ -232,7 +234,7 @@
               <li> 20 min read</ul>
 
           </div>
-          <div class="download">
+          <!-- <div class="download">
             <ul>
               <li>
                 <a href="#">
@@ -244,6 +246,17 @@
                   <img src="images/bookmark.png"> </a>
               </li>
             </ul>
+          </div> -->
+          <div class="download">
+              <ul class="clearfix">
+                  <li class="fLeft">
+                      <img src="images/download.png">
+                  </li>
+                  <li class="bookmark">
+                      <img src="images/bookmark.png" class="bm"/>
+                      <img src="images/bookmarkdark.png" class="bmdark"/>
+                  </li>
+              </ul>
           </div>
 
         </div>
@@ -273,12 +286,15 @@
 
           </div>
           <div class="download">
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="images/bookmarkdark.png"> </a>
-              </li>
-            </ul>
+              <ul class="clearfix">
+                  <li>
+                      <img src="images/download.png">
+                  </li>
+                  <li class="bookmark active">
+                      <img src="images/bookmark.png" class="bm"/>
+                      <img src="images/bookmarkdark.png" class="bmdark"/>
+                  </li>
+              </ul>
           </div>
 
         </div>
@@ -304,17 +320,15 @@
 
           </div>
           <div class="download">
-            <ul>
-              <li>
-                <a href="#">
-                  <img src="images/download.png">
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/bookmark.png"> </a>
-              </li>
-            </ul>
+              <ul class="clearfix">
+                  <li class="fLeft">
+                      <img src="images/download.png">
+                  </li>
+                  <li class="bookmark">
+                      <img src="images/bookmark.png" class="bm"/>
+                      <img src="images/bookmarkdark.png" class="bmdark"/>
+                  </li>
+              </ul>
           </div>
 
         </div>
@@ -419,7 +433,7 @@
 
 
 
-
+    </div>
     </div>
     <!-- /.container -->
   </Section>
@@ -452,6 +466,16 @@
       document.addEventListener('click', event => {
           document.querySelector(".searchbar .searchCategory ul").style.display = 'none';
       });
+
+      let bookmarkItem = document.querySelectorAll(".download .bookmark");
+      bookmarkItem.forEach((item, index) => item.addEventListener('click',() => {
+         console.log("bookmarkItem ==== ", item);
+          if(item.className.indexOf("active") == -1){
+              item.className = item.className + " active"
+          }else{
+              item.className = "bookmark"
+          }
+      }));
   </script>
 
 </body>
