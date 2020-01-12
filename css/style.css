@@ -377,22 +377,42 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
  .Mergedfilter ul li img{ float:left; margin-right:5px;}
 .Mergedfilter ul li.one{background:none;border:none;padding:2px;}.Mergedfilter ul li.active{border:1px solid #3486ab;color:#3486ab;background:#ecf9ff;}
 .Mergedfilter ul li.active a{color:#3486ab;}
-.document{ background: #F6F6F6 0% 0% no-repeat; margin:20px 0px 0px 0px; font-size:18px;  box-shadow: 0px 1px 3px #00000030; padding:8px 20px;}
- .document h5{ float:left; font-weight:normal; } 
-  .document p{ text-align:right;}
+.document{ background: #F6F6F6 0% 0% no-repeat; margin:20px 0px 0px 0px; font-size:18px;  box-shadow: 0px 1px 3px #00000030; padding:10px 10px 10px 20px;}
+ .document h5{ float:left; font-weight:normal; margin-bottom:0; line-height:25px;} 
+  .document p{ text-align:right;line-height: 24px;}
   
-  .document p a{background:#0198DB;padding:5px 10px;font-size:12px;text-align:center;color:#fff;}
+  .document p a{background:#0198DB;padding:6px 10px;font-size:12px;text-align:center;color:#fff;line-height: 14px;}
+  .mergePdfWrapper{width:100%;position: relative;}
+  .mergePdfBlock{width:93%;overflow: hidden;}
+  .mergePdfWrapper .arrowContainer a{
+    display: block;
+    width:11px;
+    height:19px;
+    background-image: url('../images/svg/arrow.svg');
+    position: absolute;
+    top:55px;
+    z-index: 1;
+}
+.mergePdfWrapper a.arrowLeft{
+    transform: rotate(180deg);
+    left:1px;
+}
+.mergePdfWrapper a.arrowRight{
+    right:25px;
+}
   .pdf { box-shadow: -5px 4px 10px #8098D529;}
-  .pdf h5{ padding:15px 10px; font-size:15px; line-height:14px; font-weight:normal; }
+  .pdf h5{ padding:15px 10px; font-size:14px; line-height:14px; font-weight:normal; margin-bottom:0;}
   .pdf h5 input{ float:left; margin-right:5px;}
-  .pdf h5 span{ margin-left:10px; border: 1px solid #333333; font-size:13px; border-radius: 4px;padding: 3px 10px; }
+  .pdf h5 span{ margin-left:10px; border: 1px solid #333333; font-size:13px; border-radius: 4px;padding: 3px 8px; }
   .checkbox{ float:left;}
     .checkbox2{ float:left;}
-  .pdf  input[type=checkbox]{ background:#000}
-  .pdf ul li{ margin:10px; text-align:center;}
+  .pdf  input[type=checkbox]{ background:#000;margin-right:5px;}
+  .pdf ul{padding:0 10px 10px;display: block;width:10000px;}
+  .pdf ul li{ margin-right:10px; text-align:center;}
   .pdf ul li label{ display:grid; background: #fbfbfb;}
-  .RecentMerged{ width:160px; padding:10px; margin:10px 0px;}
-  
+  .RecentMerged{ width:144px; padding:10px; margin:10px 0px;}
+  .RecentMerged p{font:normal 13px/14px CalibriRegular;color:#000;}
+  .recentMergedBlock h4{font: normal 15px/17px Arial;color: #000000;}
   .Preferences{ box-shadow: -5px 4px 10px #8098D529;  padding: 10px;    margin: 15px 0px;}
    .Preferences ul li{ margin:10px; text-align:center;font-size: 14px;line-height: 17px;}
    .Preferences ul li:first-child{padding-left:10px;}
