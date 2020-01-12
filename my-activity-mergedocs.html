@@ -151,7 +151,7 @@
         <div class="content_left">
         
         <div class="Mergedfilter">
-         <ul>
+         <ul class="clearfix">
       <li> <a href="#"><img src="images/bookmarkdark-black.png"> Bookmarks (3)</a> </li>
 		  <li class="active"> <img src="images/file.png">  <a  href=""> Merged Docs</a></li>
           <li><a href="#"> <img src="images/upload.png"> Uploaded Docs</a></li>
@@ -173,30 +173,66 @@
 	  
 	  <div class="pdf bgwhite">
 	  <h5><input type="checkbox" id="select_all" /> NASSCOM Artificial Intelligence Game Changer Awards 2018 <span>7 Pages</span></h5>
-	  
-	   <ul>
-      <li><input type="checkbox" id="pdf1" class="checkbox"  > 
-	  	<label for="pdf1"> <img src="images/thumbnails/pdf/PDF.png">  1</label> </li>
-		
-		 <li><input type="checkbox"  id="pdf2" class="checkbox" > 
-	  	<label for="pdf2"> <img src="images/thumbnails/pdf/PDF.png"> 2</label> </li>
-		
-		 <li><input type="checkbox"  id="pdf3" class="checkbox" > 
-	  	<label for="pdf3"> <img src="images/thumbnails/pdf/PDF.png"> 3</label> </li>
-		
-		 <li><input type="checkbox"  id="pdf4" class="checkbox" > 
-	  	<label for="pdf4"> <img src="images/thumbnails/pdf/PDF.png"> 4</label> </li>
-		
-		  <li><input type="checkbox"  id="pdf5" class="checkbox" > 
-	  	<label for="pdf5"> <img src="images/thumbnails/pdf/PDF.png"> 5</label> </li>
-		
-		 
-		
-        </ul>
+      
+      <div class="mergePdfWrapper">
+        <div class="arrowContainer">
+            <a class="arrowLeft" href="javascript:void(0);"></a>
+            <a class="arrowRight" href="javascript:void(0);"></a>
+        </div>
+        <div class="mergePdfBlock">
+            <ul>
+                <li>
+                    <input type="checkbox" id="pdf1" class="checkbox">
+                    <label for="pdf1">
+                        <img src="images/thumbnails/pdf/PDF.png"> 1</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="pdf2" class="checkbox">
+                    <label for="pdf2">
+                        <img src="images/thumbnails/pdf/PDF.png"> 2</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="pdf3" class="checkbox">
+                    <label for="pdf3">
+                        <img src="images/thumbnails/pdf/PDF.png"> 3</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="pdf4" class="checkbox">
+                    <label for="pdf4">
+                        <img src="images/thumbnails/pdf/PDF.png"> 4</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="pdf5" class="checkbox">
+                    <label for="pdf5">
+                        <img src="images/thumbnails/pdf/PDF.png"> 5</label>
+                </li>
+                
+                <li>
+                    <input type="checkbox" id="pdf11" class="checkbox">
+                    <label for="pdf11">
+                        <img src="images/thumbnails/pdf/PDF.png"> 6</label>
+                </li>
+                
+                
+                
+            </ul>
+        </div>  
+        
+      </div>
+	   
 		
 		<hr>
 		 <h5><input type="checkbox" id="select_all2" /> NASSCOM Artificial Intelligence Game Changer Awards 2018 <span>7 Pages</span></h5>
-	  
+         <div class="mergePdfWrapper">
+                <div class="arrowContainer">
+                    <a class="arrowLeft" href="javascript:void(0);"></a>
+                    <a class="arrowRight" href="javascript:void(0);"></a>
+                </div>
+                <div class="mergePdfBlock">
 	   <ul>
       <li><input type="checkbox" id="pdf6" class="checkbox2"  > 
 	  	<label for="pdf6"> <img src="images/thumbnails/pdf/PDF.png">  1</label> </li>
@@ -216,6 +252,8 @@
 		 
 		
         </ul>
+        </div>
+        </div>
 	  
 	  </div>
         
@@ -229,24 +267,27 @@
         </div>
 
        <div class="content_right">
-       <h4>Recent Merged Docs (23)</h4>
-        
-       <div class="bgwhite RecentMerged">
-	   <img src="images/rep-img.png">
-	   <p>NASSCOM Artificial Intelligence Game...</p>
-	   </div>
-        
-		
-		  <div class="bgwhite RecentMerged">
-	   <img src="images/rep-img2.png">
-	   <p>NASSCOM Artificial Intelligence Game...</p>
-	   </div>
-        
-		
-		  <div class="bgwhite RecentMerged">
-	   <img src="images/rep-img3.png">
-	   <p>NASSCOM Artificial Intelligence Game...</p>
-	   </div>
+           <div class="recentMergedBlock">
+
+               <h4>Recent Merged Docs (23)</h4>
+                
+               <div class="bgwhite RecentMerged">
+               <img src="images/rep-img.png">
+               <p>NASSCOM Artificial Intelligence Game...</p>
+               </div>
+                
+                
+                  <div class="bgwhite RecentMerged">
+               <img src="images/rep-img2.png">
+               <p>NASSCOM Artificial Intelligence Game...</p>
+               </div>
+                
+                
+                  <div class="bgwhite RecentMerged">
+               <img src="images/rep-img3.png">
+               <p>NASSCOM Artificial Intelligence Game...</p>
+               </div>
+           </div>
         
         
        
@@ -335,6 +376,20 @@ $(document).ready(function(){
         }
     });
 });
+</script>
+<script>
+    document.addEventListener('click', event => {
+        document.querySelector(".searchbar .searchCategory ul").style.display = 'none';
+    });
+
+    let bookmarkItem = document.querySelectorAll(".download .bookmark");
+    bookmarkItem.forEach((item, index) => item.addEventListener('click',() => {
+        if(item.className.indexOf("active") == -1){
+            item.className = item.className + " active"
+        }else{
+            item.className = "bookmark"
+        }
+    }));
 </script>
 </body>
 

@@ -152,7 +152,7 @@
         <div class="content_left">
         
         <div class="Mergedfilter">
-         <ul>
+         <ul class="clearfix">
       <li> <a href="#"><img src="images/bookmarkdark-black.png"> Bookmarks (3)</a> </li>
 		  <li> <img src="images/file-gray.png">  <a  href=""> Merged Docs</a></li>
           <li><a href="#"> <img src="images/upload.png"> Uploaded Docs</a></li>
@@ -168,7 +168,7 @@
 	  <div class="Preferences bgwhite">
 	  <h5> My current interest </h5>
 	  
-	   <ul>
+	   <ul class="level1">
       <li>AI/ML  </li> 
 	  <li>IoT  </li> 
 	  <li>RPA  </li> 
@@ -179,7 +179,7 @@
 		
 		 <h5>Other Categories</h5>
 		 <p>Technology</p>
-		   <ul>
+		   <ul class="level2">
       <li>AI/ML  </li> 
 	  <li>IoT  </li> 
 	  <li>RPA  </li> 
@@ -298,6 +298,20 @@ $(document).ready(function(){
         }
     });
 });
+</script>
+<script>
+    document.addEventListener('click', event => {
+        document.querySelector(".searchbar .searchCategory ul").style.display = 'none';
+    });
+
+    let bookmarkItem = document.querySelectorAll(".download .bookmark");
+    bookmarkItem.forEach((item, index) => item.addEventListener('click',() => {
+        if(item.className.indexOf("active") == -1){
+            item.className = item.className + " active"
+        }else{
+            item.className = "bookmark"
+        }
+    }));
 </script>
 </body>
 
