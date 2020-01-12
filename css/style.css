@@ -367,7 +367,8 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
  
  .cardeventgrid{ width:175px; float:left; margin:0px 10px; padding:10px; background:#fff; overflow:hidden;}
  
- .Mergedfilter ul li{ line-height: 14px;background:#fff; font-size:13px; padding:5px 8px 5px 8px;margin:2px;position:relative;box-shadow: 0px 5px 35px #00000008; border: 1px solid #CCC2B8;}
+ .Mergedfilter ul li{ line-height: 14px;background:#fff; font-size:13px; padding:7px 8px;position:relative;box-shadow: 0px 5px 35px #00000008; border: 1px solid #CCC2B8;margin-right:10px;float:left;}
+ .Mergedfilter ul li a{font:normal 13px/15px CalibriRegular;}
  .Mergedfilter ul li img{ float:left; margin-right:5px;}
 .Mergedfilter ul li.one{background:none;border:none;padding:2px;}.Mergedfilter ul li.active{border:1px solid #3486ab;color:#3486ab;background:#ecf9ff;}
 .Mergedfilter ul li.active a{color:#3486ab;}
@@ -392,7 +393,9 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
    .Preferences ul li.active {color:#fff; background:#0198DB ;     padding: 2px 10px;}
    .Preferences h5{ padding:15px 10px; font-weight:600; color:#000;  font-size:14px; line-height:14px;  }
     .Preferences p{ padding:0px 10px; font-weight:normal; color:#8B8B8B;  font-size:14px; line-height:14px;  }
-  .all_flter select { background: #fff; border:1px solid #ccc;    padding:4px; margin:8px 0px 5px 0px;} 
+    .all_flter {margin-top:8px;}
+    
+  /* .all_flter select { background: #fff; border:1px solid #ccc;    padding:4px; margin:8px 0px 5px 0px;}  */
  
 /* @Kishor CSS Ends */
 
@@ -441,20 +444,18 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
     padding: 10px 12px;
     width:65%;
 }
-.searchbar .searchCategory{
+.searchbar .searchCategory, .bookmarkList{
     float:left;
     padding: 10px 29px 7px 8px;
     background: transparent;
     border-right: 1px solid #CBC1B6;
-}
-.searchbar .searchCategory{
     color:#7F7F7F;
     position:relative;
 }
-.searchbar .searchCategory ul{
-    display:none;
+.searchbar .searchCategory ul, .bookmarkList ul{
+    display:block;
 }
-.searchbar .searchCategory::before{
+.searchbar .searchCategory::before, .bookmarkList::before{
     content: "";
     position: absolute;
     top: 12px;
@@ -468,7 +469,7 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
     transform: rotate(135deg);
     -webkit-transition: all .25s ease;
 }
-.searchbar .searchCategory ul{
+.searchbar .searchCategory ul, .bookmarkList ul{
     position: absolute;
     width: 160px;
     top:41px;
@@ -479,16 +480,35 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
     padding:12px;
     z-index: 12;
 }
-.searchbar .searchCategory ul li{
+.searchbar .searchCategory ul li, .bookmarkList ul li{
     display: block;
     font: normal 13px/17px CalibriRegular;
     letter-spacing: 0;
     color: #2A2A2A;
     margin-bottom:5px;
 }
-.searchbar .searchCategory ul li:hover{cursor: pointer;color: #158CD1;font-weight: bold;}
-.searchbar .searchCategory ul li.active{color: #158CD1;font-weight: bold;}
-.searchbar .searchCategory ul li:last-child{margin-bottom:0;}
+.searchbar .searchCategory ul li:hover, .bookmarkList ul li:hover{cursor: pointer;color: #158CD1;font-weight: bold;}
+.searchbar .searchCategory ul li.active, .bookmarkList ul li.active{color: #158CD1;font-weight: bold;}
+.searchbar .searchCategory ul li:last-child .bookmarkList ul li:last-child{margin-bottom:0;}
+.bookmarkList{background: #fff;border: 1px solid #CBC1B6;line-height:15px;padding:4px 25px 4px 10px;}
+.bookmarkList.active{background: #ECF9FF 0% 0% no-repeat padding-box;box-shadow: 0px 5px 35px #00000008;
+    border: 1px solid #0198DB;}
+.bookmarkList span{font:normal 13px/15px CalibriRegular;}
+.bookmarkList.active span{color: #158CD1;}
+.bookmarkList::before{
+    top: 6px;
+    right: 11px;
+    width: 7px;
+    height: 7px;
+}
+.bookmarkList::before{border-color:#0198DB #0198DB transparent transparent;}
+.bookmarkList ul{
+    top:35px;
+    border-color:#0198DB;
+}
+.bookmarkList ul li{line-height: 15px;margin-bottom:3px;}
+.bookmarkList.active{}
+/* color: #158CD1; */
 /* @navigation end*/
 
 /* @Home start */
