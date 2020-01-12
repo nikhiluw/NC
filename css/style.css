@@ -304,12 +304,13 @@ img{ max-width:100%;}
 .content_left{width:70%;float:left;}
 .content_left h2{padding:0px;font-size:24px;font-weight:normal;line-height:29px;}
 .content_left h3{padding:0px;font: normal 16px/26px CalibriRegular;margin-top: 0;margin-bottom: 0;}
-.content_left h4{padding:10px 0px;font:normal 15px/17px Arial;color:#000;margin-bottom:5px;}
-.breadcrumb{line-height: 13px;}
+.content_left h4{padding:0;font:normal 15px/17px Arial;color:#000;margin-bottom:15px;}
+.breadcrumb{line-height: 13px;margin-bottom: 15px;}
 .breadcrumb ul{list-style-type:none;line-height:13px;}
  .breadcrumb ul li{display:inline-block;margin-right:7px;font-size:11px;line-height: 13px;}
- .filter{padding-bottom:10px;margin-bottom:15px;}
+ .filter{padding-bottom:0;margin-bottom:20px;}
  .filter ul li{background:#fff;padding:1px 25px 1px 8px;margin-right:4px;position:relative;box-shadow:0px 5px 35px #00000008;border:1px solid #CBC1B6;float:left;}
+ .filter ul li:hover{cursor: pointer;}
 .filter ul li.one{background:none;border:none;padding:2px;}
  .filter ul li a{font:normal 13px/15px CalibriRegular;}
  .filter ul li a:before{content:"";position:absolute;top:5px;right:8px;width:7px;height:7px;border-style:solid;border-width:1px;border-color:#000 #000 transparent transparent;-webkit-transform:rotate(45deg);transform:rotate(135deg);-webkit-transition:all .25s ease;}
@@ -319,9 +320,9 @@ img{ max-width:100%;}
 .card-body{background:#fff;padding:15px;overflow:hidden;margin:0 0 15px 0px;box-shadow:-10px 5px 10px #8098D512;position: relative}
 .Reports_img{width:170px;float:left;margin-right:10px;}
 .Reports_text{width:460px;float:left;}
-.Reports_text h4{padding:0px;font-weight:normal;font-size:20px;line-height:17px;font-family: CalibriRegular;margin-bottom:3px;}
+.Reports_text h4{padding:0px;font-weight:normal;font-size:20px;line-height:24px;font-family: CalibriRegular;margin-bottom:3px;}
  .leftside{float:left;}
- .Reports_text ul.Posteddate{line-height: 13px;}
+ .Reports_text ul.Posteddate{line-height: 13px;display: block;}
  .Reports_text ul.view{line-height: 17px;}
  ul.Posteddate li{font-size:12px;color:#7F7F7F;border-right:1px solid #7F7F7F;padding:0px 5px;line-height:13px;}
   ul.Posteddate li span{ color:#158CD1;}
@@ -330,7 +331,7 @@ img{ max-width:100%;}
  ul.views li{line-height:16px;color:#7F7F7F;font-size: 14px;margin-right:18px;}
    ul.views li span{ color:#158CD1;}
  ul.views li img{float:left;margin-right:5px;margin-top:2px;}
-.Reports_text p{font:normal 14px/16px CalibriRegular;margin:6px 0px;color:#2E2D29;}
+.Reports_text p{font:normal 14px/16px CalibriRegular;margin:10px 0px 6px; color:#2E2D29;}
 .download{text-align:right;}
 .download ul li{padding:3px;}
 .thumbnail{text-align:right;}
@@ -661,6 +662,83 @@ ul.list-unstyled li.active{border-left:6px solid #158CD1;}
 .thumbnailView .reportList .Reports_data .views{
     padding-left:22px;
     background: url('../images/svg/eye.svg') 0 3px no-repeat;
+}
+.filterPanel{
+    width:292px;
+    position:absolute;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 6px 15px #0000003D;
+    border: 1px solid #0198DB;
+    left:-1px;
+    top:27px;
+    z-index: 2;
+    padding:10px 0 0 10px;
+}
+.filterPanel .filter1{
+    display: flex;
+    justify-content:center;
+    margin-bottom:15px;
+    cursor: auto;
+}
+.filterPanel .filter1 li{
+    font: normal 14px/17px Calibri;
+    color: #777777;
+    padding:2px;
+    border:none;
+    margin:0;
+    box-shadow: 0px 0px 0px #00000008;
+}
+.filterPanel .filter1 li.lArr, .filterPanel .filter1 li.rArr{
+    content:'';
+    width:17px;
+    height:17px;
+    position: relative;
+}
+.filterPanel .filter1 li.lArr::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 4px;
+    width: 7px;
+    height: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000 #000 transparent transparent;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+.filterPanel .filter1 li.rArr::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 7px;
+    height: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000 #000 transparent transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.filterPanel .filter2{
+    float:left;
+    cursor: auto;
+}
+.filterPanel .filter2 li{
+    margin:0 10px 10px 0;
+    width:46px;
+    height:22px;
+    font: normal 14px/17px CalibriRegular;
+    color: #777777;
+    border:none;
+    box-shadow: 0px 0px 0px #00000008;
+    padding:2px 0 0;
+    text-align:center;
+}
+.filterPanel .filter2 li:hover, .filterPanel .filter2 li.active{
+    background-color: #0198DB;
+    color:#fff;
+    line-height:17px;
 }
 /* @Home end */
 
