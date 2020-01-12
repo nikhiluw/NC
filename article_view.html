@@ -245,12 +245,12 @@
                 </div>
                 <div class="download">
                     <ul class="clearfix">
-                        <li class="fLeft">
+                        <li>
                             <img src="images/download.png">
                         </li>
-                        <li class="bookmark fLft">
-                            <img src="images/bookmark.png"> </a>
-                            <!-- <img src="images/bookmark-black-shape.png"> -->
+                        <li class="bookmark">
+                            <img src="images/bookmark.png" class="bm"/>
+                            <img src="images/bookmarkdark.png" class="bmdark"/>
                         </li>
                     </ul>
                 </div>
@@ -308,6 +308,21 @@
         document.querySelector(".searchbar .searchCategory ul").style.display = 'block';
     });
 </script>
+<script>
+        document.addEventListener('click', event => {
+            document.querySelector(".searchbar .searchCategory ul").style.display = 'none';
+        });
+  
+        let bookmarkItem = document.querySelectorAll(".download .bookmark");
+        bookmarkItem.forEach((item, index) => item.addEventListener('click',() => {
+           console.log("bookmarkItem ==== ", item);
+            if(item.className.indexOf("active") == -1){
+                item.className = item.className + " active"
+            }else{
+                item.className = "bookmark"
+            }
+        }));
+    </script>
 
 
 </html>
